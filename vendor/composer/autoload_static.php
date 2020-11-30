@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit805a5095415fb2f8d0f48882c3ae3eed
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/nutrisystem/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'N' => 
+        array (
+            'Nutri\\' => 6,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Nutri\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hcodebr/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -41,7 +51,8 @@ class ComposerStaticInit805a5095415fb2f8d0f48882c3ae3eed
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInit805a5095415fb2f8d0f48882c3ae3eed::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit805a5095415fb2f8d0f48882c3ae3eed::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit805a5095415fb2f8d0f48882c3ae3eed::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit805a5095415fb2f8d0f48882c3ae3eed::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit805a5095415fb2f8d0f48882c3ae3eed::$classMap;
 

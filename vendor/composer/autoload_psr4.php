@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '' => array($vendorDir . '/nutrisystem/php-classes/src'),
+    'Nutri\\' => array($vendorDir . '/hcodebr/php-classes/src'),
 );

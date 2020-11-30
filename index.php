@@ -8,7 +8,11 @@ $app->config('debug', true);
 
 $app->get('/', function() {
     
-	echo "OK";
+	$sql = new Nutri\DB\Sql();
+
+	$results = $sql->select("SELECT * FROM categoriaalimentos");
+
+	echo json_encode($results);
 
 });
 
