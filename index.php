@@ -2,17 +2,18 @@
 
 require_once("vendor/autoload.php");
 
-$app = new \Slim\Slim();
+use \Slim\Slim;
+use \Nutri\Page;
+
+$app = new Slim();
 
 $app->config('debug', true);
 
 $app->get('/', function() {
     
-	$sql = new Nutri\DB\Sql();
+	$page = new Page();
 
-	$results = $sql->select("SELECT * FROM categoriaalimentos");
-
-	echo json_encode($results);
+	$page->setTpl("index");
 
 });
 
